@@ -1,11 +1,96 @@
+
+//Д/З №3 Циклы: for, while, repeat while
+//№1. Создать функцию, которая будет считать количество символов, пробелов и выдавать всё как итог в конце
 //
-//  main.swift
-//  d-z-3
+//№2. Создать функцию, которая будет считать количество определенных букв в строке
 //
-//  Created by Абдулла-Бек on 9/1/23.
-//
+//№3. Создать функцию, которая будет выдавать "ААА" если передать туда число 3(например)
+
 
 import Foundation
 
-print("Hello, World!")
+//Задание 1
 
+func changeSymbols(text: String){
+    var symbols = ""
+    var symbolsCount = 0
+    var spaces = " "
+    var spacesCount = 0
+    
+    //    for _ in text{
+    //        symbols += ""
+    //        symbolsCount += 1
+    //        spaces += " "
+    //        spacesCount += 1
+    //    }
+    
+    for symbol in text{
+        if symbol != " " {
+            symbolsCount += 1
+        }
+    }
+    symbols += " - \(symbolsCount) символов"
+    print(symbols)
+    
+    for space in text {
+        if space == " " && space != "," && space != "." {
+            spacesCount += 1
+        }
+    }
+    spaces += " - \(spacesCount) пробелов"
+    print(spaces)
+}
+//
+//        spaces += " "
+//        spacesCount += 1
+//    }
+//    symbols += " - \(symbolsCount) символов"
+//    spaces += " - \(spacesCount) пробелов"
+//
+//    print(spaces)
+//}
+
+
+let someText = "The Third Punic War was the third and last of the Punic Wars between Carthage and Rome, and lasted from 149 to 146 BC."
+
+changeSymbols(text: someText)
+
+// Задание 2
+
+func symbol(text: String) {
+    var symbol = ""
+    var symbolCount = 0
+    
+    for symbol in text {
+        if symbol != " " && symbol != "," && symbol != "." {
+            symbolCount += 1
+        }
+    }
+    symbol += " - \(symbolCount) букв"
+    print(symbol)
+}
+
+
+
+let someText2 = "The Third Punic War was the third and last of the Punic Wars between Carthage and Rome, and lasted from 149 to 146 BC."
+
+symbol(text: someText2)
+
+//Задание 3
+
+func numberSymbol(text: String){
+    var number = 0
+    var symbols = "A"
+    
+    for _ in text{
+        number += 1
+        symbols += "A"
+    }
+    number += " - \(symbols)"
+    print(number)
+}
+
+print("Введите цифру")
+let enterNumber = readLine()!
+
+numberSymbol(text: enterNumber)
