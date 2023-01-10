@@ -16,14 +16,7 @@ func changeSymbols(text: String){
     var symbolsCount = 0
     var spaces = " "
     var spacesCount = 0
-    
-    //    for _ in text{
-    //        symbols += ""
-    //        symbolsCount += 1
-    //        spaces += " "
-    //        spacesCount += 1
-    //    }
-    
+
     for symbol in text{
         if symbol != " " {
             symbolsCount += 1
@@ -40,16 +33,6 @@ func changeSymbols(text: String){
     spaces += " - \(spacesCount) пробелов"
     print(spaces)
 }
-//
-//        spaces += " "
-//        spacesCount += 1
-//    }
-//    symbols += " - \(symbolsCount) символов"
-//    spaces += " - \(spacesCount) пробелов"
-//
-//    print(spaces)
-//}
-
 
 let someText = "The Third Punic War was the third and last of the Punic Wars between Carthage and Rome, and lasted from 149 to 146 BC."
 
@@ -78,19 +61,17 @@ symbol(text: someText2)
 
 //Задание 3
 
-func numberSymbol(text: String){
-    var number = 0
-    var symbols = "A"
-    
-    for _ in text{
-        number += 1
-        symbols += "A"
-    }
-    number += " - \(symbols)"
-    print(number)
-}
-
 print("Введите цифру")
 let enterNumber = readLine()!
 
+func numberSymbol(text: String){
+    var symbols = ""
+    
+    for _ in text{
+        symbols += "A"
+    }
+    print(symbols)
+}
+
 numberSymbol(text: enterNumber)
+
